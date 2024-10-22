@@ -1,3 +1,5 @@
+Final project for Database Administration course. Used SQL to construct database of pokemon, regions, and trainers. Created web page using html, css, & php to host database online.
+
 Data Dictionary:
 
 Pokemon:
