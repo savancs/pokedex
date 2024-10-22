@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	margin-top: 0px;
+	font-family: sans-serif;
+	background-image: linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)), 
+	url('https://media.istockphoto.com/id/1441130515/vector/game-pokeball-outline-icon-pokemon-container-vector-illustration.jpg?s=612x612&w=0&k=20&c=tOLR4evnwuQsKdd-omdBjgyZ8BHFCuATlhZ3yXyE1Vw=');
+	background-size: 5%;
+	background-position: center center;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+
+header{
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	line-height: 90px;
+	background-color: #e1f5e6;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  justify-content: center;
+}
+
+thead th {
+  width: 55%;
+
+}
+
+header * {
+	display: inline;
+	height: 60px;
+}
+
+header ul {
+	padding: 0;
+}
+
+header li {
+	margin-left: 20px;
+}
+
+section {
+	height: auto;
+	border:  1px solid black;
+	diplay: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+
+footer {
+	text-align: center;
+	padding:  50px;
+}
+
+#Pokemon h1 {
+    font-size: 7em;
+
+}
+
+section h2 {
+    font-size: 2.5em;
+
+}
+
+section h3 {
+    font-size: 1.5em;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}

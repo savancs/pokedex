@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokedex</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8'>
+  </head>
+<body>
+  <header>
+      <a href="homepg.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" class ="logo-img"></a>
+      <nav>
+        <ul>
+          <li><a href="pokemon.html">Pokemon</a></li>
+          <li><a href="trainer.html">Trainers</a></li>
+          <li><a href="region.html">Regions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<h2>Region Form</h2>
+
+<form action="region.php" method = "post">
+  <label for="name">Region Name:</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  <label for="cardinality">Cardinality:</label><br>
+  <input type="text" id="cardinality" name="cardinality" value=""><br>
+  <label for="professor">Professor:</label><br>
+  <input type="text" id="professor" name="professor" value=""><br>
+
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/region.php".</p>
+
+</body>
+</html>

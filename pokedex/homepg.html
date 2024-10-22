@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pokedex</title>
+		<link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8'>
+	</head>
+	<body>
+		<header>
+			<a href="homepg.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" class ="logo-img"></a>
+			<nav>
+				<ul>
+					<li><a href="pokemon.html">Pokemon</a></li>
+					<li><a href="trainer.html">Trainers</a></li>
+					<li><a href="region.html">Regions</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="Pokemon">
+				<div class="section-inner">
+					<h3>List of Pokemon</h3>
+					<table>
+						<tr>
+							<th>Number</th>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Height</th>
+							<th>Weight</th>
+							<th>Region</th>
+						</tr>
+						<?php
+							$con = mysqli_connect('localhost','root','RwTPsW4242', 'pokemon');
+
+							$sql = "SELECT num, name, type, height, weight, region from pokemon";
+							$result = $con-> query($sql);
+
+							if($result-> num_rows > 0 ){
+								while($row = $result-> fetch_assoc()){
+									echo "<tr><td>". $row["num"] ."</td><td>". $row["name"]."</td><td>". $row["type"]."</td><td>". $row["height"]."</td><td>". $row["weight"]."</td><td>". $row["region"] ."</td></tr>";
+								}
+							echo "</table>";
+							} else {
+								echo "No results.";
+							}
+							$con-> close();
+						?>	
+					</table>
+			</section>
+			<section id="Trainers">
+				<div class="section-inner">
+					<h3>List of Trainers</h3>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Age</th>
+							<th>Height</th>
+							<th>Region</th>
+							<th>Pokemon Number</th>
+						</tr>
+					<?php
+							$con = mysqli_connect('localhost','root','RwTPsW4242', 'pokemon');
+
+							$sql = "SELECT name, age, height, region, pokenum from trainer";
+							$result = $con-> query($sql);
+
+							if($result-> num_rows > 0 ){
+								while($row = $result-> fetch_assoc()){
+									echo "<tr><td>". $row["name"] ."</td><td>". $row["age"]."</td><td>". $row["height"]."</td><td>". $row["region"]."</td><td>". $row["pokenum"] ."</td></tr>";
+								}
+							echo "</table>";
+							} else {
+								echo "No results.";
+							}
+							$con-> close();
+						?>	
+					</table>
+			</section>
+			<section id="Locations">
+				<div class="section-inner">
+					<h3>List of Regions</h3>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Cardinality</th>
+							<th>Professor</th>
+						</tr>
+						<?php
+							$con = mysqli_connect('localhost','root','RwTPsW4242', 'pokemon');
+
+							$sql = "SELECT name, cardinality, professor from region";
+							$result = $con-> query($sql);
+
+							if($result-> num_rows > 0 ){
+								while($row = $result-> fetch_assoc()){
+									echo "<tr><td>". $row["name"] ."</td><td>". $row["cardinality"]."</td><td>". $row["professor"] ."</td></tr>";
+								}
+							echo "</table>";
+							} else {
+								echo "No results.";
+							}
+							$con-> close();
+						?>
+					</table>
+			</section> 
+		</main>
+		<footer>
+			Savannah Smith, Database Systems class, 2024
+		</footer>
+	</body>
+</html>
